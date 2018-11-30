@@ -1,10 +1,6 @@
-import {combineReducers} from 'redux';
-import allOrders from './getOrders';
-import Checked from './checked';
-import Sorted from './sorted';
+import { combineReducers } from 'redux';
+import Field from './data'
 
-const rootReducer = combineReducers({
-  allOrders, Checked, Sorted
-});
+const rootReducer = combineReducers({ Field });
 
-export {rootReducer}
+export { rootReducer }

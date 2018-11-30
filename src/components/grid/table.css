@@ -1,0 +1,36 @@
+.grid {
+  margin-top: 15px;
+  border-spacing: 0;
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+
+.grid-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid-field {
+  border: none;
+}
+
+.grid-td-index {
+  background-color: #e8e8e8;
+  font-size: 0.875rem;
+  color: #444;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #999;
+}
+
+.grid-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 4px;
+}

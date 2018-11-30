@@ -1,7 +1,7 @@
-const path = require('path')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -24,18 +24,6 @@ module.exports = {
           }
         ],
       },
-      // {
-      //     test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
-      //     exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
-      //     use: [
-      //         {
-      //             loader: 'file-loader',
-      //             options: {
-      //                 name: 'static/media/[name].[hash:8].[ext]'
-      //             }
-      //         }
-      //     ]
-      // },
       {
         test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/, /\.svg$/],
         use: [
@@ -81,24 +69,21 @@ module.exports = {
     ],
   },
   resolve: {
-    // do not use alias @ with linux system
     extensions: ['*', '.js', '.jsx'],
     alias: {
       'src': path.resolve(__dirname, '../', 'src'),
     }
   },
   plugins: [
-    // remove dist directory
     new CleanWebpackPlugin(
       ['dist'],
-      { // normalized root path
+      {
         root: path.resolve(__dirname, '../')
       }
     ),
     new UglifyJSPlugin({
       sourceMap: true
     }),
-    // Generates an `index.html` file with the <script> injected.
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../', 'public', 'index.html'),
       favicon: path.resolve(__dirname, '../', 'public', 'favicon.ico'),
@@ -117,4 +102,4 @@ module.exports = {
     })
   ],
   devtool: 'source-map'
-}
+};
