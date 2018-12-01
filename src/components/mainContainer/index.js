@@ -1,22 +1,21 @@
 import React, { Fragment } from 'react';
 import Tr from 'src/components/mainContainer/tr';
-import { firstRow } from 'src/constants';
+import { horizontalRows, letters } from 'src/constants';
 
-const MainContainer = props => {
-  console.log(firstRow);
+const MainContainer = () => {
   return (
     <Fragment>
       <tr>
-       <td colSpan={6}>
-         <input type="text"/>
-       </td>
+        <td />
+        {
+          letters.map((letter, i) =>
+            <td key={i}>{letter}</td>
+          )
+        }
       </tr>
       {
-        Array.from({ length: 20 }).map((_, i) =>
-          <Tr
-            index={i + 1}
-            key={i}
-          />
+        Array.from(horizontalRows).map((_, i) =>
+          <Tr index={i + 1} key={i} />
         )
       }
     </Fragment>

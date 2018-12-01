@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import Field from './data'
+import Coordinates from './coordinates'
 
-const rootReducer = combineReducers({ Field });
+const rootReducer = combineReducers({ Coordinates });
 
 export { rootReducer }

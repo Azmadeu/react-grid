@@ -1,13 +1,6 @@
-const alphabet = letters => {
-  const arr = [];
+export const horizontalRows = { length: 20 };
+export const verticalRows = { length: 6 };
+export const letters = Array.from(verticalRows).map((_, i) => String.fromCharCode(65 + i));
 
-  for (let i = 65; i <= (i + letters); i++) {
-    arr.push(String.fromCharCode(i));
-  }
 
-  return arr;
-};
 
-export const rows = { length: 6 };
-
-export const firstRow = alphabet(rows.length);

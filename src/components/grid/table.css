@@ -1,7 +1,7 @@
 .grid {
-  margin-top: 15px;
   border-spacing: 0;
   border: 1px solid #999;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .grid-field {
-  border: none;
+  text-align: center;
 }
 
 .grid-td-index {
@@ -30,7 +30,32 @@
   justify-content: center;
 }
 
+.input-container {
+  margin-top: 15px;
+  background-color: #e8e8e8;
+  align-items: center;
+  border: 1px solid #999;
+  border-bottom: none !important;
+}
+
+.input-container input {
+  margin: 8px 12px;
+  padding: 3px;
+  width: 15%;
+}
+
+td:first-child {
+  width: 3%
+}
+
 td {
   border: 1px solid #999;
+  color: #555;
   padding: 4px;
+}
+
+tr:first-child td {
+  background-color: #e8e8e8;
+  text-align: center;
+  font-weight: bold;
 }

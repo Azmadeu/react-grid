@@ -6,7 +6,9 @@ class Grid extends Component {
   render() {
     return (
       <div className='grid-app'>
-        <bold className='grid-title'>React Grid</bold>
+        <div className='input-container'>
+          <input type='text' />
+        </div>
         <table className='grid'>
           <tbody>
           <MainContainer/>

@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import Td from './td';
-import { rows } from 'src/constants';
+import { verticalRows, letters } from 'src/constants';
 
-const Tr = props => {
-  return (
-    <tr>
-      <td className='grid-td-index'>
+class Tr extends PureComponent {
+  render() {
+    const { index } = this.props;
+
+    return (
+      <tr>
+        <td className='grid-td-index'>
        <span>
-          {props.index}
+          {index}
        </span>
-      </td>
-      {
-        Array.from(rows).map((_, i) => <Td key={i} index={i + 1}/> )
-      }
-    </tr>
-  );
-};
-
+        </td>
+        {
+          Array.from(verticalRows).map((_, i) =>
+            <Td
+              key={i}
+              index={index}
+              letter={letters[i]}
+            />
+          )
+        }
+      </tr>
+    );
+  }
+}
 
 export default Tr;
