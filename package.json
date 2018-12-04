@@ -6,6 +6,7 @@
   "homepage": "http://Azmadeu.github.io/react-grid",
   "private": true,
   "scripts": {
+    "build": "react-scripts build",
     "start": "webpack-dev-server --config config.webpack.dev.js --hot",
     "prod": "webpack --config config.webpack.prod.js",
     "predeploy": "npm run prod",
