@@ -109,17 +109,36 @@ class MainContainer extends PureComponent {
 
     return (
       <div className='grid-app'>
-        <div className='input-container'>
-          <span className='grid-cell'>
+          <div className='input-container'>
+            <div className='cell-container'>
+              <span className='grid-cell'>
             {currentCell}
           </span>
-          <input
-            type='text'
-            value={value}
-            onKeyPress={this.handlePress}
-            onChange={this.handleChange}
-          />
-        </div>
+              <input
+                type='text'
+                value={value}
+                onKeyPress={this.handlePress}
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className='Notes'>
+              <b>
+                Notes:
+              </b>
+              <span className="formula">
+                =SUM(A1, A2, ...)
+             </span>
+              <span className="formula">
+                =AVERAGE(A1, A2, ...)
+              </span>
+              <span className="formula">
+                =CONCAT(A1, A2, ...)
+              </span>
+              <span className="formula">
+                =HYPERLINK(URL, text)
+              </span>
+            </div>
+          </div>
         <table className='grid'>
           <tbody>
           <tr>
