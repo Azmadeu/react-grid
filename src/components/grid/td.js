@@ -64,6 +64,8 @@ class Td extends Component {
 
       if (event.ctrlKey && formula) {
 
+        console.log('lol');
+
         updateFieldsKeys(letter, num, label + event.target.id + ', ', ['label']);
 
         document.getElementById(focusList[0]).focus();

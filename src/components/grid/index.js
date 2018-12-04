@@ -27,7 +27,7 @@ class MainContainer extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { focusList, coordinates } = nextProps;
+    const {focusList, coordinates} = nextProps;
 
     let cell = focusList[focusList.length - 1] || 'A1';
 
@@ -52,18 +52,18 @@ class MainContainer extends PureComponent {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    if (nextState.value[0] === '=' && !this.state.formulaHasChanged){
-      this.props.clearFocusList(0, 0);
 
-      this.setState({ formulaHasChanged: true })
-    } else if (nextState.value[0] === '=') {
+     if (nextState.value[0] === '=') {
+       if (nextState.formulaHasChanged) {
+         this.props.clearFocusList(nextProps.focusList.indexOf(nextProps.focusList[nextProps.focusList - 1]));
+       }
       FORMULA_ENUM.forEach(formula => {
         if (nextState.value.toUpperCase().includes(formula) && this.state.calculateFormula !== formula) {
-          this.setState({ calculateFormula: formula });
+          this.setState({ calculateFormula: formula, formulaHasChanged: false });
         }
       });
     } else if (nextState.calculateFormula !== '') {
-      this.setState({ calculateFormula: '', formulaHasChanged: false })
+      this.setState({ calculateFormula: '', formulaHasChanged: true })
     }
   }
 

@@ -11,8 +11,10 @@ class Tr extends Component {
       JSON.stringify(focusList) !== JSON.stringify(this.props.focusList) &&
       ((this.props.focusList.length > focusList.length) && focusList.length === 1) ||
       !!(focusList[focusList.length - 1] && focusList[focusList.length - 1].slice(1) === index.toString()) ||
-      nextProps.formula
+      this.props.formula
     );
+
+    return true;
   }
 
   render() {
