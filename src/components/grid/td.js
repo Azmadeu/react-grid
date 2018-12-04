@@ -62,9 +62,9 @@ class Td extends Component {
 
       const { letter, num, label, value } = this.state;
 
-      if ((event.ctrlKey || event.keyCode == 91 && formula) {
 
-        console.log('lol');
+      if ((event.ctrlKey || event.metaKey) && formula) {
+
 
         updateFieldsKeys(letter, num, label + event.target.id + ', ', ['label']);
 
@@ -72,7 +72,7 @@ class Td extends Component {
 
         this.setState({ focused: letter + num === focusList[0] })
 
-      } else if (event.ctrlKey || event.keyCode == 91) {
+      } else if (event.ctrlKey || event.metaKey) {
 
         this.setState({ focused: false, inFocusList: true })
       } else if (formula) {
@@ -108,7 +108,7 @@ class Td extends Component {
 
     this.setState({ focused: true, inFocusList: true });
 
-    if ((event.ctrlKey || event.keyCode == 91) && formula) {
+    if ((event.ctrlKey || event.metaKey) && formula) {
       if (focused) {
         this.setState({ focused: false, inFocusList: false })
       }
@@ -116,7 +116,7 @@ class Td extends Component {
       document.getElementById(focusList[0]).focus();
     }
 
-    this.props.focusCell(letter + num, event.ctrlKey || event.keyCode == 91);
+    this.props.focusCell(letter + num, event.ctrlKey || event.metaKey);
   };
 
   handlePress = event => {
