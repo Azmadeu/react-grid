@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "description": "",
-  "homepage": "http://Azmadeu.github.io/react-grid",
+  "homepage": "http://Azmadeu.github.io/react-table-app",
   "private": true,
   "scripts": {
+    "build": "react-scripts build",
     "start": "webpack-dev-server --config config/webpack.dev.js --hot",
     "prod": "webpack --config config/webpack.prod.js",
     "predeploy": "npm run build",

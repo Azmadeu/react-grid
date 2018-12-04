@@ -6,7 +6,7 @@ import {
   calculateCellWithFormula,
   updateCellsMethod,
   clearFocusList
-} from 'src/actions';
+} from 'src/actions/index';
 
 const mapStateToProps = state => {
   return {

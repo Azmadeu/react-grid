@@ -1,5 +1,5 @@
-import { letters, horizontalRows } from 'src/constants';
-import { isInteger, isNumber, checkUrl, numberWithSpaces } from 'src/lib';
+import { letters, horizontalRows } from 'src/constants/index';
+import { isInteger, isNumber, checkUrl, numberWithSpaces } from 'src/lib/index';
 import {
   CHANGE_COOR_KEY,
   ACTION_WITH_FORMULA,
