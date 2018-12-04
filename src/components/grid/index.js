@@ -54,16 +54,13 @@ class MainContainer extends PureComponent {
   componentWillUpdate(nextProps, nextState) {
 
      if (nextState.value[0] === '=') {
-       if (nextState.formulaHasChanged) {
-         this.props.clearFocusList(nextProps.focusList.indexOf(nextProps.focusList[nextProps.focusList - 1]));
-       }
       FORMULA_ENUM.forEach(formula => {
         if (nextState.value.toUpperCase().includes(formula) && this.state.calculateFormula !== formula) {
-          this.setState({ calculateFormula: formula, formulaHasChanged: false });
+          this.setState({ calculateFormula: formula });
         }
       });
     } else if (nextState.calculateFormula !== '') {
-      this.setState({ calculateFormula: '', formulaHasChanged: true })
+      this.setState({ calculateFormula: '' })
     }
   }
 
