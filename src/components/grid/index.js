@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import Tr from 'src/components/grid/tr';
-import { horizontalRows, letters } from 'src/constants';
+import Tr from '../../components/grid/tr';
+import { horizontalRows, letters } from '../../constants';
 import '../../App.css';
 
 const FORMULA_ENUM = ['SUM', 'AVERAGE', 'CONCAT', 'HYPERLINK'];

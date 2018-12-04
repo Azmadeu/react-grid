@@ -1,12 +1,12 @@
 import { connect } from "react-redux";
-import MainContainer from 'src/components/grid/index'
+import MainContainer from '../components/grid/index'
 import {
   updateFieldsKeys,
   focusCell,
   calculateCellWithFormula,
   updateCellsMethod,
   clearFocusList
-} from 'src/actions/index';
+} from '../actions';
 
 const mapStateToProps = state => {
   return {

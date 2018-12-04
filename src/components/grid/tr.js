@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Td from './td';
-import { verticalRows, letters } from 'src/constants';
+import { verticalRows, letters } from '../../constants';
 
 class Tr extends Component {
 

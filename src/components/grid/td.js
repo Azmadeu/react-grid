@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { numberWithSpaces } from 'src/lib';
+import { numberWithSpaces } from '../../lib';
 
 class Td extends Component {
 

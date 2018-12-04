@@ -82,7 +82,7 @@ module.exports = {
   devtool:'source-map',
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '../', 'public', 'index.html')
+      template: path.resolve(__dirname, './', 'public', 'index.html')
     })
   ]
 };

@@ -1,10 +1,10 @@
-import { letters, horizontalRows } from 'src/constants/index';
-import { isInteger, isNumber, checkUrl, numberWithSpaces } from 'src/lib/index';
+import { letters, horizontalRows } from '../constants/index';
+import { isInteger, isNumber, checkUrl, numberWithSpaces } from '../lib/index';
 import {
   CHANGE_COOR_KEY,
   ACTION_WITH_FORMULA,
   CHANGE_COOR_METHOD,
-} from 'src/actions/types'
+} from '../actions/types'
 
 const range = Array.from(horizontalRows).map((_, i) => i + 1);
 

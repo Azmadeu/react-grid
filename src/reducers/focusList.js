@@ -1,4 +1,4 @@
-import { FOCUS_CELL, CLEAR_FOCUS_LIST } from 'src/actions/types'
+import { FOCUS_CELL, CLEAR_FOCUS_LIST } from '../actions/types'
 
 const initialState = [];
 
