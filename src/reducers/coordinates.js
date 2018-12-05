@@ -2,8 +2,7 @@ import { letters, horizontalRows } from '../constants/index';
 import { isInteger, isNumber, checkUrl, numberWithSpaces } from '../lib/index';
 import {
   CHANGE_COOR_KEY,
-  ACTION_WITH_FORMULA,
-  CHANGE_COOR_METHOD,
+  ACTION_WITH_FORMULA
 } from '../actions/types'
 
 const range = Array.from(horizontalRows).map((_, i) => i + 1);
@@ -104,10 +103,6 @@ const Coordinates = (state = initialState, action) => {
           }
         }), cell.value = `=${formula}(${selectedCells})`, nextState
       );
-    }
-
-    case CHANGE_COOR_METHOD: {
-      return
     }
 
     default: {
