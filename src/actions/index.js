@@ -27,15 +27,6 @@ export const updateFieldsKeys = (letter, num, value, keys, hyperlink) => {
   }
 };
 
-export const updateCellsMethod = (letter, num, method) => {
-  return {
-    type: CHANGE_COOR_METHOD,
-    method,
-    letter,
-    num,
-  }
-};
-
 export const focusCell = (coordinate, ctrlKey) => {
   return {
     type: FOCUS_CELL,
